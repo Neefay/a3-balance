@@ -35,7 +35,7 @@ A3BAL_accept_running = true;
     private _settings = ["ace_medical_AIDamageThreshold", "ace_medical_playerDamageThreshold", "ace_medical_fatalDamageSource",
         "ace_medical_statemachine_AIUnconsciousness", "ace_medical_statemachine_fatalInjuriesAI", "ace_medical_deathChance",
         "ace_medical_painUnconsciousChance", "ace_medical_engine_damagePassThroughEffect"] apply {[_x, str (missionNamespace getVariable [_x, "unset"])]};
-    private _pilot = getText (configFile >> "CfgPatches" >> "a3bal_pilot" >> "buildId");
+    private _pilot = getText (configFile >> "CfgPatches" >> "a3bal_tests" >> "buildId");
     [["BEGIN_ACCEPT", 1, _suiteId, count _cells, count _blast, _trials, _blastTrials, productVersion, getLoadedModsInfo,
         _settings, _missing, isClass (configFile >> "CfgPatches" >> "ace_medical"), _pilot]] call _emit;
 

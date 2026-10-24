@@ -1,18 +1,178 @@
 {
-  "addon": "a3bal_main",
-  "status": "verified in game",
-  "pilot_build_id": "db7dc5c0944e341b34b47cdebb6477b06dc7c0f21479d38a35126fe16ef3e7e8",
-  "session": "session",
+  "status": "CANDIDATE: not verified in game; do not distribute",
+  "pilot_build_id": "84a4ac50fcc350eb2e1366ea7bcf96c757f7ee4697fdf0a6fec1f0fc72c34666",
+  "session": null,
   "built_with": "hemtt",
-  "no_break_spaces_replaced": 2,
-  "config_sha256": "25c759386f007202a49a94db3ec9204cbaf35797f4ad462fc48189d532ea9368",
-  "verified_pilot_config_sha256": "9e7a5810ca25cdfafd68ba515334442d9999b952dae50587910316cb31228b83",
-  "required_addons": 179,
+  "addons": {
+    "a3bal_3cb_baf": {
+      "config_sha256": "5f0ca996fca830d4023078361b87dec7db5fe0d1fd15086b4b763f9dd45639a4",
+      "bytes": 7588,
+      "required_addons": [
+        "A3_Characters_F",
+        "UK3CB_BAF_Equipment_Helmets",
+        "UK3CB_BAF_Equipment_Vests",
+        "UK3CB_BAF_Vehicles_Weapons",
+        "UK3CB_BAF_Weapons_Ammo",
+        "UK3CB_Factions_Equipment_Vests"
+      ]
+    },
+    "a3bal_3cb_factions": {
+      "config_sha256": "6eaaae8554a7458f60b1d7079e5efbfee83f3ce9fd409006f53d5fb45117ee6b",
+      "bytes": 8253,
+      "required_addons": [
+        "A3_Characters_F",
+        "UK3CB_Factions_Equipment_CW_Headgear_Soviet",
+        "UK3CB_Factions_Equipment_CW_Headgear_US",
+        "UK3CB_Factions_Equipment_Vests",
+        "UK3CB_Factions_Headgear",
+        "UK3CB_Factions_Vehicles_Common",
+        "UK3CB_Factions_Weapons2_M1"
+      ]
+    },
+    "a3bal_3cb_factions_2": {
+      "config_sha256": "bcc69e292ffcdf0af9f4a25b79727791d236f694d6034e68cefce11329b8619b",
+      "bytes": 2192,
+      "required_addons": [
+        "UK3CB_Factions_AAF_O",
+        "UK3CB_Factions_Equipment_Vests"
+      ]
+    },
+    "a3bal_ace_ballistics": {
+      "config_sha256": "2fa2b476dbb33e239d4bdd9307958d38c7f31883f56fb710862812fcae7a347c",
+      "bytes": 1440,
+      "required_addons": [
+        "ace_ballistics"
+      ]
+    },
+    "a3bal_broma": {
+      "config_sha256": "7c0bf321ccaecea58ccd3606450dcdf7599050688a92fd941ad0a3c1c371dc97",
+      "bytes": 27977,
+      "required_addons": [
+        "A3_Characters_F",
+        "BRM_DCU",
+        "BRM_M81",
+        "BRM_MODELS",
+        "BRM_SLDCLRS"
+      ]
+    },
+    "a3bal_broma_2": {
+      "config_sha256": "c88c46f5fab7339b3237350d8104fc2f22a96d66174e838da503bfd3ac17948a",
+      "bytes": 24854,
+      "required_addons": [
+        "A3_Characters_F",
+        "BRM_DCU",
+        "BRM_M81",
+        "BRM_MODELS"
+      ]
+    },
+    "a3bal_broma_3": {
+      "config_sha256": "b99d88f883e9af52ec550df99221b99b314e3f0c3f3f2e50d2605abca2b05ad6",
+      "bytes": 7530,
+      "required_addons": [
+        "A3_Characters_F",
+        "BRM_DCU",
+        "BRM_M81",
+        "BRM_MODELS"
+      ]
+    },
+    "a3bal_ffp_weapons": {
+      "config_sha256": "441dd8141417c4362c98592e46e1d404a772df2c9990661b2c378dede0b974c2",
+      "bytes": 637,
+      "required_addons": [
+        "ffp_weapons"
+      ]
+    },
+    "a3bal_rhs_afrf": {
+      "config_sha256": "1beb1d79f5dc049d49f3051fe15a147c74955baed25cbd8a18316f81710efeb7",
+      "bytes": 13670,
+      "required_addons": [
+        "A3_Characters_F",
+        "rhs_main_loadorder"
+      ]
+    },
+    "a3bal_rhs_gref": {
+      "config_sha256": "345a8105e8fe2d466b85a9772296fd47c660fe49b0ec392c98eead971a2a1188",
+      "bytes": 2894,
+      "required_addons": [
+        "A3_Characters_F",
+        "rhsgref_main_loadorder"
+      ]
+    },
+    "a3bal_rhs_saf": {
+      "config_sha256": "6627142ca20f746f69ef75bac365bdb6057983903eb4733eb819d0fe95de7a6d",
+      "bytes": 2484,
+      "required_addons": [
+        "A3_Characters_F",
+        "rhssaf_main_loadorder"
+      ]
+    },
+    "a3bal_rhs_usaf": {
+      "config_sha256": "f9a29c45f5ea53b0e0112bbb239b592d701fae135c78af8da873b765be1b114a",
+      "bytes": 22010,
+      "required_addons": [
+        "A3_Characters_F",
+        "rhsusf_main_loadorder"
+      ]
+    },
+    "a3bal_rhs_usaf_2": {
+      "config_sha256": "553d057562b23ea8b976553cae29ff3beef2d9ed31545fe0505b9efa5416d3d2",
+      "bytes": 1959,
+      "required_addons": [
+        "A3_Characters_F",
+        "rhsusf_main_loadorder"
+      ]
+    },
+    "a3bal_ron": {
+      "config_sha256": "20fbacd8d8504d8a8564344e08907019fe423a4366d81fe6d710ebd841cfd8b9",
+      "bytes": 26935,
+      "required_addons": [
+        "RON_Uniform"
+      ]
+    },
+    "a3bal_sns": {
+      "config_sha256": "ddc00e702b781d2453df9dcf3fcf9748b9c726227eff71bb007de1f909657edc",
+      "bytes": 98912,
+      "required_addons": [
+        "A3_Characters_F",
+        "simc_mc_67_core",
+        "simc_mc_81_core",
+        "simc_mc_93_core",
+        "simc_nv_67_core",
+        "simc_svn_67_core",
+        "simc_uaf_67_core",
+        "simc_uaf_68_core",
+        "simc_uaf_81_core",
+        "simc_uaf_88_core"
+      ]
+    },
+    "a3bal_sns_2": {
+      "config_sha256": "ebf31dcb0589dfe1bd859d230aa1a3423280860251fe8862c003bb370ccc2924",
+      "bytes": 10349,
+      "required_addons": [
+        "simc_mc_93_core",
+        "simc_uaf_67_core",
+        "simc_uaf_81_core"
+      ]
+    },
+    "a3bal_sns_headgear": {
+      "config_sha256": "e61b73fb12e364a4d6b2db494baeea7f07226769f5935396fba015c67643ff67",
+      "bytes": 2269,
+      "required_addons": [
+        "A3_Characters_F",
+        "sns_french_headgear",
+        "sns_headgears"
+      ]
+    }
+  },
   "changed_fields": 20013,
   "by_kind": {
     "headgear": {
       "target_classes": 1026,
       "changed_fields": 1254
+    },
+    "projectile": {
+      "target_classes": 104,
+      "changed_fields": 294
     },
     "vest": {
       "target_classes": 1656,
@@ -21,10 +181,6 @@
     "uniform_unit": {
       "target_classes": 753,
       "changed_fields": 10542
-    },
-    "projectile": {
-      "target_classes": 104,
-      "changed_fields": 294
     }
   }
 }

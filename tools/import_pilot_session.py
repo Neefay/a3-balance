@@ -10,6 +10,7 @@ from collections import defaultdict
 import csv
 import json
 from pathlib import Path
+import re
 import statistics
 
 from import_balance_verification import validate as validate_config
@@ -104,13 +105,35 @@ def compare(rows, blast, manifest):
     return checks, order, blasts, held
 
 
-def markdown(config, checks, order, blasts, held, begin, manifest):
+REBIND = re.compile(r"Updating base class .*?by '([^']*a3bal[^']*)'", re.I)
+
+
+def rebinds(rpt):
+    """Engine log lines where one of our files changed a class's parent; there must be none.
+    The engine logs these while loading, so the RPT must be the whole log from game start."""
+    found = []
+    with rpt.open("rb") as stream:
+        head = stream.read(4096)
+        if not head.startswith(b"=====") or b"-mod=" not in head:
+            raise ValueError("This RPT does not start at game launch. Use the whole RPT file from %LOCALAPPDATA%\\Arma 3, "
+                             "not a copy of part of it: parent-class changes are logged while the game loads.")
+        stream.seek(0)
+        for line in stream:
+            if b"Updating base class" in line and b"a3bal" in line.lower():
+                text = line.decode("utf-8", "replace").strip()
+                if REBIND.search(text):
+                    found.append(text)
+    return found
+
+
+def markdown(config, checks, order, blasts, held, begin, manifest, rebound=()):
     cap = manifest["max_shots"]
     shown = lambda v: f">{cap}" if v > cap else f"{v:g}"
-    passed = config["passed"] and all(c["verdict"] == "match" for c in checks)
+    passed = config["passed"] and not rebound and all(c["verdict"] == "match" for c in checks)
     lines = ["# Balance pilot session", "", f"**{'PASS' if passed else 'NEEDS REVIEW'}**", "",
              f"- Config checks: {'passed' if config['passed'] else 'FAILED'} ({config['checked_classes']:,} classes, "
              f"{config['checked_fields']:,} entries, {config['failure_count']} failures).",
+             f"- Classes whose parent the patch changed (engine log): {len(rebound)}.",
              f"- Patched rounds and items matching their vanilla reference (within {TOLERANCE} shot): "
              f"{sum(c['verdict'] == 'match' for c in checks)} of {len(checks)}.",
              f"- Specialized rounds in order against vests: {sum(o['verdict'] == 'in order' for o in order)} of {len(order)} (review only).",
@@ -166,7 +189,10 @@ if __name__ == "__main__":
     rows = summarize(results, accept)
     blast = summarize_blast(results)
     checks, order, blasts, held = compare(rows, blast, accept)
-    text, passed = markdown(config, checks, order, blasts, held, begin, accept)
+    rebound = rebinds(args.rpt)
+    text, passed = markdown(config, checks, order, blasts, held, begin, accept, rebound)
+    if rebound:
+        text += "\n## Parents changed by the patch\n\n" + "\n".join(f"- `{line}`" for line in rebound[:50]) + "\n"
     args.output.mkdir(parents=True, exist_ok=False)
     (args.output / "verification-result.json").write_text(json.dumps(config, indent=2, ensure_ascii=False), encoding="utf-8")
     with (args.output / "trials.csv").open("w", encoding="utf-8-sig", newline="") as stream:
@@ -179,7 +205,8 @@ if __name__ == "__main__":
     (args.output / "ACCEPTANCE.md").write_text(text, encoding="utf-8")
     report = {"passed": passed, "config_passed": config["passed"], "acceptance_run": run, "pilot_build_id": pilot["build_id"],
               "suite_id": accept["suite_id"], "trials": len(results), "missing_classes": begin[10],
-              "matches": sum(c["verdict"] == "match" for c in checks), "checks": len(checks), "settings": begin[9], "product_version": begin[7]}
+              "matches": sum(c["verdict"] == "match" for c in checks), "checks": len(checks), "settings": begin[9], "product_version": begin[7],
+              "rebound_parents": len(rebound)}
     (args.output / "session-report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(json.dumps({k: report[k] for k in ("passed", "config_passed", "matches", "checks", "trials", "missing_classes")}))
     if not passed:

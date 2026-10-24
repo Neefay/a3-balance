@@ -117,6 +117,8 @@ to the patterns below and run the next step again.
 | Rounds named explicitly | `ammunition_policy.py`: `IDENTIFIED`, `ORDINARY_BALL`, `SHORT_GENERIC` |
 | Mods whose rounds use RHS's damage scale | `ammunition_policy.py`: `RHS_SCALE_PREFIXES` |
 | A vanilla value your modset overrides on purpose (ACE's 7.62x54R speed) | `build_balance_pilot.py`: `LOADED_REFERENCE` |
+| Which addon each mod's values go in, and the load-order addon it requires | `build_patch.py`: `FAMILIES` |
+| Which hidden classes may follow their children's new values | `plan_patch.py`: `free` |
 
 The ammunition part is built around RHS: each cartridge pairs a vanilla ball
 with RHS's ball. With a different ammunition mod, change the second name in each
@@ -133,8 +135,11 @@ python a3bal.py pilot
 
 This drafts again (now with the capture data), builds the query database,
 checks the vanilla references against session 3, prepares the acceptance test
-and builds `balance-pilot/@A3Balance_Pilot`. The pilot is an ordinary local mod
-with every change, plus its own test scripts.
+and builds `balance-pilot/@A3Balance_Pilot`. Along the way `build_patch.py`
+turns the ledger into one small patch per mod and proves it on a model of your
+whole config: every target gets its value, nothing else moves, and no class
+changes parent ([how](HOW_IT_WORKS.md#parent-classes)). The pilot holds exactly
+those patches, plus an `a3bal_tests` addon with the checks.
 
 To rebuild after changing rules, delete `balance-pilot/` first: builds never
 overwrite each other.
@@ -146,14 +151,16 @@ overwrite each other.
 and run this one line in the debug console:
 
 ```sqf
-[] execVM "\a3bal_pilot\tests\run.sqf";
+[] execVM "\a3bal_tests\tests\run.sqf";
 ```
 
 Leave it for about an hour until the hint says **Balance pilot session
-complete**. It runs two checks:
+complete**. It first checks that every mod's patch loaded unchanged, then runs
+two checks:
 
-1. **Config:** every changed class, field by field, against what the pipeline
-   expects, including inheritance. Any difference is a failure.
+1. **Config:** every class whose values the patch can reach, field by field,
+   against what the pipeline expects, including inheritance. Any difference is a
+   failure.
 2. **Damage:** spawns AI targets and shoots them at point-blank range with ACE
    medical, counting shots until they go down. Patched mod rounds go against
    vanilla vests and helmets, and vanilla rounds against patched mod gear. Each
@@ -165,8 +172,12 @@ complete**. It runs two checks:
 python a3bal.py session "<session 4 RPT>"
 ```
 
-The report is `validation/session/ACCEPTANCE.md`, headed **PASS** or **NEEDS
-REVIEW**. Example: [the 2026-10-24 report](results/SESSION_2026-10-24.md).
+Give it the whole RPT file, not a copy of part of it: the engine logs parent
+changes while the game loads, and the import fails if the log doesn't start at
+launch. The report is `validation/session/ACCEPTANCE.md`, headed **PASS** or
+**NEEDS REVIEW**. It passes only if the config checks pass, the damage checks
+match, and the engine logged no parent change by any `a3bal` file. Example:
+[the 2026-10-24 report](results/SESSION_2026-10-24.md).
 
 ## 6. Release
 
@@ -177,9 +188,10 @@ hemtt release
 ```
 
 `release` refuses unless the session passed for this exact pilot build. It
-writes `addons/main/config.cpp` and `release.json`. HEMTT then builds and signs
-the mod. To rename the addon, change `prefix` in `.hemtt/project.toml` and
-`ADDON` in `tools/build_release.py`.
+copies each tested patch to `addons/<mod>/`, removes patches an earlier build
+generated that this one no longer has, and writes `release.json`. HEMTT then
+builds and signs the mod. To rename the addons, change `prefix` in
+`.hemtt/project.toml` and `PREFIX` in `tools/build_patch.py`.
 
 ## After a mod update
 
@@ -190,10 +202,16 @@ sessions 1 to 4. Delete or rename the old `data-recovered/`, `validation/` and
 
 ## Status of the scripts
 
-Every step except one was used to build the released patch, and the repository
-reproduces that build byte for byte from the same captures. The exception is
-`export_configs.sqf`, which was rewritten for this repository because the
-original export script was not kept. It writes the same record format the
-extractor reads, and it compiles cleanly with HEMTT, but it has not run in Arma
-yet. If its import reports problems, open an issue with the summary from
-`data-recovered/summary.json`.
+The captures, the draft, the damage test and the session import were all used
+on the 2026-10-24 modset. Two parts have not run in Arma yet:
+
+- **The per-mod patch build** (`build_patch.py` and the pilot made from it). It
+  replaced a single-file build that copied whole protection blocks and changed
+  18 parent classes. On the same captures, the new patches reproduce all 52,743
+  protection and ammunition values that the old build passed in game, apart from
+  254 values on hidden classes that now follow their children. The independent
+  parent check predicts no changes. The next session confirms it in game.
+- **`export_configs.sqf`**, which was rewritten for this repository because the
+  original export script was not kept. It writes the same record format the
+  extractor reads and compiles cleanly with HEMTT. If its import reports
+  problems, open an issue with the summary from `data-recovered/summary.json`.

@@ -19,3 +19,4 @@ tools/balance-pilot/
 tools/helmet-pilot/
 tools/release/
 *.rpt
+tools/patch/

@@ -11,11 +11,11 @@ heavy plate.
 - **Everyone loads it**: every player, the server and any headless client. Damage
   is worked out where the hit unit is local, so a player without the patch would
   take different damage.
-- It needs the full preset loaded (RHS, 3CB, ACE, KAT, BromA, S&S and the rest).
-  Load order is automatic.
-- **Mod updates:** this patch copies values from the mod versions it was built
-  against. After RHS, 3CB, BromA, S&S, ACE or KAT update, rebuild the patch and
-  rerun its check before playing.
+- It is one small addon per mod (`a3bal_rhs_afrf.pbo`, `a3bal_broma.pbo` and so
+  on). Each loads after its mod and skips itself when that mod isn't loaded.
+- **Mod updates:** the values were drafted against the mod versions it was built
+  for. After RHS, 3CB, BromA, S&S, RoN or ACE update, rebuild the patch and rerun
+  its check before playing.
 - It is unsigned. If the server checks signatures, sign it with your own key
   (Arma 3 Tools' DSSignFile, or HEMTT) and put the `.bikey` on the server.
 - To revert, unload the mod. It changes no saves or missions.

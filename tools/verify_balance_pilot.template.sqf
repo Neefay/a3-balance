@@ -2,23 +2,26 @@
     private _buildId = "__BUILD_ID__";
     private _part = __PART__;
     private _parts = __PARTS__;
-    private _patch = configFile >> "CfgPatches" >> "a3bal_pilot";
+    private _patch = configFile >> "CfgPatches" >> "a3bal_tests";
     if (!isClass _patch || {getText (_patch >> "buildId") != _buildId}) exitWith {
         A3BAL_verify_done = -1;
         hint "Balance pilot missing or wrong build. Enable the supplied local mod with the original full preset and restart.";
     };
-    if (isClass (configFile >> "CfgPatches" >> "a3bal_helmets_pilot")) exitWith {
+    private _old = ["a3bal_helmets_pilot", "a3bal_pilot"] select {isClass (configFile >> "CfgPatches" >> _x)};
+    if (count _old > 0) exitWith {
         A3BAL_verify_done = -1;
-        diag_log format ["A3BALPILOT_PREFLIGHT_REFUSED|%1|OLD_HELMET_PILOT_LOADED", _buildId];
-        hint "Check refused: the old helmet pilot is also loaded. Remove it from the launcher, keep only A3 Balance Pilot, and restart.";
+        diag_log format ["A3BALPILOT_PREFLIGHT_REFUSED|%1|OLD_PILOT_LOADED|%2", _buildId, _old];
+        hint "Check refused: an older balance pilot is also loaded. Remove it from the launcher, keep only A3 Balance Pilot, and restart.";
     };
-    private _missingAddons = (getArray (_patch >> "requiredAddons")) select {
-        !(isClass (configFile >> "CfgPatches" >> _x))
+    // Each mod's patch skips itself when its mod is missing; all of them must have loaded, unchanged.
+    private _missingAddons = (__ADDONS__) select {
+        _x params ["_name", "_hash"];
+        getText (configFile >> "CfgPatches" >> _name >> "a3bal_hash") != _hash
     };
     if (count _missingAddons > 0) exitWith {
         A3BAL_verify_done = -1;
-        {diag_log format ["A3BALPILOT_PREFLIGHT_REFUSED|%1|MISSING_ADDON|%2", _buildId, _x];} forEach _missingAddons;
-        hint format ["Check refused: %1 required addons missing. Restore the ORIGINAL FULL preset with the balance pilot enabled and restart.", count _missingAddons];
+        {diag_log format ["A3BALPILOT_PREFLIGHT_REFUSED|%1|MISSING_ADDON|%2", _buildId, _x select 0];} forEach _missingAddons;
+        hint format ["Check refused: %1 balance patches did not load (%2). Load the full modset the patch was built for and restart.", count _missingAddons, (_missingAddons apply {_x select 0}) joinString ", "];
     };
     private _checks = __CHECKS__;
     private _run = format ["%1_%2", diag_tickTime, floor random 1000000000];

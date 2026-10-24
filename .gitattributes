@@ -1,0 +1,5 @@
+# Keep LF everywhere: the build hashes config and script bytes.
+* text=auto eol=lf
+*.pbo binary
+*.bikey binary
+*.bisign binary

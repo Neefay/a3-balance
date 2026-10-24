@@ -1,0 +1,30 @@
+{
+  "addon": "a3bal_main",
+  "status": "verified in game",
+  "pilot_build_id": "db7dc5c0944e341b34b47cdebb6477b06dc7c0f21479d38a35126fe16ef3e7e8",
+  "session": "session",
+  "built_with": "hemtt",
+  "no_break_spaces_replaced": 2,
+  "config_sha256": "25c759386f007202a49a94db3ec9204cbaf35797f4ad462fc48189d532ea9368",
+  "verified_pilot_config_sha256": "9e7a5810ca25cdfafd68ba515334442d9999b952dae50587910316cb31228b83",
+  "required_addons": 179,
+  "changed_fields": 20013,
+  "by_kind": {
+    "headgear": {
+      "target_classes": 1026,
+      "changed_fields": 1254
+    },
+    "vest": {
+      "target_classes": 1656,
+      "changed_fields": 7923
+    },
+    "uniform_unit": {
+      "target_classes": 753,
+      "changed_fields": 10542
+    },
+    "projectile": {
+      "target_classes": 104,
+      "changed_fields": 294
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# HEMTT output and signing keys
+.hemttout/
+releases/
+*.biprivatekey
+.hemttprivatekey
+
+# Python
+__pycache__/
+
+# Pipeline workspace: captures, drafts and builds are generated per modset (see docs/MAKE_YOUR_OWN.md)
+tools/data-recovered/
+tools/audit/
+tools/proposal/
+tools/validation/
+tools/chart-data/
+tools/equipment.sqlite
+tools/example-chart.html
+tools/balance-pilot/
+tools/helmet-pilot/
+tools/release/
+*.rpt

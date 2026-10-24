@@ -1,0 +1,220 @@
+{
+  "proposal_version": 11,
+  "baseline": "loaded_vanilla_only",
+  "source_run": "1.05789e+06_125856",
+  "source_status": "partial",
+  "source_missing_by_section": {
+    "CfgWeapons": 5
+  },
+  "source_sha256": {
+    "wearables.jsonl": "404918a18570f161514eaf69bfdf0b0397e5fa66f44c73656b5f757856f13f72",
+    "configs.relevant.jsonl": "c7cb9aaf146f27c29eb0aab4824f669bc61858a171d242303b2b278320e173c5"
+  },
+  "generator_sha256": "cb6e6d995c325219ae09d9b6ee627f013cac8401ae617a6a86efb214f1ae7b57",
+  "ammunition_generator_sha256": "b6319280a73ee2d86eab815a48333e018eda1f6006a4415533e734a4a7348c2c",
+  "wearable_assessment_generator_sha256": "37fe75602960e7a5808813bb7e314c5361970fb4c16acd8bfa4e4f945ab11a57",
+  "wearable_assessment": {
+    "classes": {
+      "uniform": 6592,
+      "vest": 2925
+    },
+    "profiles": {
+      "vest": 56,
+      "uniform": 34
+    },
+    "statuses": {
+      "matches_vanilla_profile": 6446,
+      "review_uniform_item_fields": 39,
+      "vanilla_reference_preserved": 347,
+      "review_vanilla_role_comparison": 1294,
+      "review_role_protection_conflict": 76,
+      "review_text_protection": 1282,
+      "review_construction_identity": 14,
+      "unresolved_uniform_unit": 19
+    },
+    "roles": {
+      "vest": {
+        "plate_carrier": 1172,
+        "unidentified": 199,
+        "extended_armor": 466,
+        "load_bearing": 309,
+        "soft_fragmentation": 468,
+        "explosive_specialist": 71,
+        "modular_carrier": 235,
+        "diving": 5
+      },
+      "uniform": {
+        "ordinary_clothing": 4556,
+        "cbrn": 46,
+        "civilian_clothing": 1764,
+        "pilot_coveralls": 208,
+        "diving": 6,
+        "integrated_armor": 1,
+        "virtual_reality": 9,
+        "special_purpose": 2
+      }
+    },
+    "comparison_rows": 77431,
+    "unit_usage_rows": 6549,
+    "unresolved_uniforms": 19,
+    "automatic_field_changes": 0
+  },
+  "wearable_targets_generator_sha256": "2bc91dfe8401170fe002caebbf6da13ed458c19c33832e2c7842d9170c2b5bf5",
+  "wearable_targets": {
+    "statuses": {
+      "matches_vanilla_profile": 6446,
+      "review_uniform_item_fields": 39,
+      "vanilla_reference_preserved": 347,
+      "proposed_partial_wearable_change": 1238,
+      "proposed_wearable_change": 1171,
+      "review_nonpublic_class": 164,
+      "review_shared_unit_target_conflict": 1,
+      "review_held_target_fields": 65,
+      "review_no_selected_vest_tier": 5,
+      "unresolved_uniform_unit": 19,
+      "selected_target_with_retained_fields": 22
+    },
+    "proposed_wearables": {
+      "vest": 1656,
+      "uniform": 753
+    },
+    "field_changes": 18465,
+    "changed_unit_classes": 753,
+    "held_text_fields": 0,
+    "held_civilian_global_fields": 130
+  },
+  "handheld_usage_generator_sha256": "3f86ef6c2a71d8695330c303f92de34cc4d93e1af6026a8d47d2748361a41119",
+  "handheld_usage": {
+    "snapshot": "validation\\remaining\\full\\snapshot.sqlite",
+    "sha256": "6310708a5b068222023db0e364b4cfe96d8162d6aa1d8d4d20540d1ee3511ad4",
+    "verdicts": {
+      "no_magazines": 156,
+      "vehicle_shared": 241,
+      "handheld_only": 238
+    }
+  },
+  "ammunition_cartridges": [
+    {
+      "cartridge": "5.56x45",
+      "ready": true,
+      "members": 32,
+      "blockers": []
+    },
+    {
+      "cartridge": "5.45x39",
+      "ready": true,
+      "members": 14,
+      "blockers": []
+    },
+    {
+      "cartridge": "7.62x39",
+      "ready": true,
+      "members": 14,
+      "blockers": []
+    },
+    {
+      "cartridge": "7.62x51",
+      "ready": true,
+      "members": 32,
+      "blockers": []
+    },
+    {
+      "cartridge": "7.62x54R",
+      "ready": true,
+      "members": 27,
+      "blockers": []
+    }
+  ],
+  "release_stage": "v11 ladder draft; helmet pilot v9 verified in game; range test done (Tigr hull loss accepted); S&S true-text passThrough written as vanilla 1; combined pilot (helmets, vests, uniform units, ammunition) with one-session check built and awaiting in-game verification; civilian global fields (measured in the session) and legacy uniform items held",
+  "helmet_preservation_guard_rows": 24,
+  "wearable_target_rows": 9517,
+  "wearable_preservation_guard_rows": 534,
+  "wearable_preservation_statuses": {
+    "retain_observed_field": 486,
+    "review_missing_descendant_path": 48
+  },
+  "anchors": 27,
+  "coverage_rows": 14183,
+  "coverage_statuses": {
+    "matches_vanilla_profile": 6446,
+    "review_uniform_item_fields": 39,
+    "reference_preserved": 430,
+    "vanilla_reference_preserved": 347,
+    "matches_target": 713,
+    "proposed_change": 1130,
+    "proposed_partial_wearable_change": 1238,
+    "proposed_wearable_change": 1171,
+    "review_nonpublic_class": 193,
+    "review_identity": 1395,
+    "review_shared_unit_target_conflict": 1,
+    "review_held_target_fields": 65,
+    "review_no_selected_vest_tier": 5,
+    "unresolved_uniform_unit": 19,
+    "selected_target_with_retained_fields": 22,
+    "review_no_vanilla_equivalent": 2,
+    "preserved_no_target": 544,
+    "review_cartridge_identity": 249,
+    "preserved_outside_scale": 146,
+    "preserved_special_function": 6,
+    "deferred_no_magazine_evidence": 15,
+    "review_terminal_model": 2,
+    "preserved_subsonic_observed": 5
+  },
+  "proposed_classes": {
+    "vest": 1656,
+    "headgear": 1026,
+    "uniform_unit": 753,
+    "projectile": 104
+  },
+  "proposed_field_changes": 20013,
+  "ammunition_penetration_check_rows": 57,
+  "ammunition_mapping_rows": 635,
+  "ammunition_families": 5,
+  "ammunition_preservation_guards": 16,
+  "ammunition_policy": {
+    "bullet_classes": 635,
+    "mapped_classes": 120,
+    "proposed_classes": 104,
+    "field_changes": 294,
+    "preservation_guards": 16,
+    "ready_cartridges": [
+      "5.56x45",
+      "5.45x39",
+      "7.62x39",
+      "7.62x51",
+      "7.62x54R"
+    ],
+    "statuses": {
+      "review_cartridge_identity": 249,
+      "matches_target": 16,
+      "reference_preserved": 92,
+      "preserved_outside_scale": 146,
+      "preserved_special_function": 6,
+      "deferred_no_magazine_evidence": 15,
+      "review_terminal_model": 2,
+      "proposed_change": 104,
+      "preserved_subsonic_observed": 5
+    },
+    "mapping_bases": {
+      "vanilla_reference": 5,
+      "derived_specialized_ladder": 82,
+      "vanilla_ordinary_ball_equivalent": 48
+    }
+  },
+  "potential_unproposed_descendants": 74,
+  "rule_class_counts": {
+    "ordinary_composite": 527,
+    "vanilla_uniform_body_tier": 753,
+    "vanilla_vest_role_tier": 1656,
+    "vanilla_rifle_terminal_scale": 38,
+    "derived_steel_light_vanilla": 418,
+    "derived_specialized_ladder": 66,
+    "vanilla_crew_helmet": 25,
+    "vanilla_jet_pilot": 22,
+    "vanilla_heavy_visored": 7,
+    "vanilla_hard_hat": 24,
+    "vanilla_heli_aircrew": 2,
+    "vanilla_model_twin": 1
+  },
+  "stage": "draft ledger; no generated or installed patch"
+}

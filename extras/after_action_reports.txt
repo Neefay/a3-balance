@@ -1,0 +1,168 @@
+=====================================================================
+  A3 BALANCE // CLASSIFIED ANNEX 7.62
+  HANDLING: EYES ONLY. IF YOU UNPACKED THIS PBO TO READ IT, YOU ARE
+  EXACTLY THE KIND OF PERSON THIS ANNEX IS ABOUT.
+=====================================================================
+
+This file exists so the PBO weighs exactly 7.62 MB. It does nothing in
+game. Neither do you, according to the following reports.
+
+
+---------------------------------------------------------------------
+AAR 001 // OPERATION PLATE CARRIER CHRISTMAS
+---------------------------------------------------------------------
+SUMMARY: Before the patch, Rifleman "Tank" ate fourteen rounds of
+7.62x51 to the chest, said "I'm good," and kept walking. After the
+patch he ate two and died in the treeline. He has since filed a
+complaint with the mod author, the server owner, and God.
+
+LESSONS LEARNED: Plates are not a personality. Neither is the 6B45
+you insist on wearing with a desert uniform in Chernarus.
+
+
+---------------------------------------------------------------------
+AAR 002 // OPERATION STANDBY
+---------------------------------------------------------------------
+00:00  Squad lead: "Standby."
+00:04  Squad lead: "Standby."
+00:11  Squad lead: "Okay, standby."
+00:26  Squad lead alt-tabs to look up what a FRAGO is.
+00:41  Squad lead: "Standby for standby."
+01:13  Server restart. Mission complete. Morale: nonexistent.
+
+
+---------------------------------------------------------------------
+AAR 003 // THE MEDIC
+---------------------------------------------------------------------
+Casualty called "MEDIC" eleven times over six minutes.
+The medic was located 400 m away, reorganizing his backpack so the
+saline bags were in alphabetical order. When he arrived he applied
+nine tourniquets, zero of them to the limb that was missing, then
+asked the casualty if he could "just respawn real quick."
+
+Casualty bled out from a wound in a body region that, per this patch,
+is now exactly as protected as vanilla. It did not help.
+
+
+---------------------------------------------------------------------
+AAR 004 // RADIO DISCIPLINE
+---------------------------------------------------------------------
+Recorded on the platoon net, in order:
+  - Forty seconds of breathing
+  - A dog
+  - "Is this thing on"
+  - Someone's mum asking if they want pizza rolls
+  - "CONTACT FRONT" (there was no front; we were in a circle)
+  - A mechanical keyboard being violently assaulted
+  - The squad lead, again: "Standby."
+
+TFAR has requested a transfer to a different unit.
+
+
+---------------------------------------------------------------------
+AAR 005 // ZEUS CONFESSION
+---------------------------------------------------------------------
+I, the Zeus, freely admit to the following war crimes:
+  1. Spawning a T-100 behind the medic "for flavor."
+  2. Remote-controlling an AI civilian to walk into the convoy route
+     and stand there, motionless, until someone typed "?" in chat.
+  3. Telling everyone the mission would be "chill, like two hours."
+     It was four and a half hours. Nobody chilled.
+  4. Giving the enemy AP rounds. You read the ladder page. You saw
+     what 7BZ3 does now. I saw it too. I laughed.
+
+
+---------------------------------------------------------------------
+AAR 006 // THE GUY WITH THE 1911
+---------------------------------------------------------------------
+Peer conflict. Combined arms. Armor on both sides.
+One man brought a 1911, a cowboy hat and a chest rig with no plates
+"for mobility." He moved with great mobility directly into a PKM.
+This patch made his chest rig load-bearing: armor 0, passThrough 1.
+That was already true. That was always true. We just wrote it down.
+
+
+---------------------------------------------------------------------
+AAR 007 // THE TIGR DRIVER
+---------------------------------------------------------------------
+The Tigr used to stop every rifle round in the game. The driver
+treated it like a Bond car. After the patch, a single 5.45 round came
+through the hull, and the driver learned, in real time, that a
+config file had been the only thing keeping him alive.
+
+He has since been reassigned to walking.
+
+
+---------------------------------------------------------------------
+AAR 008 // FIRE TEAM COMPOSITION, AS PLANNED VS AS DEPLOYED
+---------------------------------------------------------------------
+PLANNED                     DEPLOYED
+Team leader                 Team leader (AFK, "doorbell")
+Automatic rifleman          Automatic rifleman (no ammo, "forgot")
+Grenadier                   Grenadier (has fired 0 grenades, 3 at friendlies)
+Rifleman                    Two snipers, nobody asked for either
+                            One guy in a ghillie suit in an urban map
+                            One guy who joined 40 minutes late and
+                            wants a recap "real quick"
+
+
+---------------------------------------------------------------------
+AAR 009 // THE BALANCE PATCH ITSELF
+---------------------------------------------------------------------
+Before: every mod had its own idea of armor. BromA helmets stopped
+everything. RHS rounds bounced off plates like ping pong balls. S&S
+wrote "true" where a number should go and the engine just shrugged.
+
+After: everyone is on the vanilla ladder. A 6B3 is a Carrier Rig. A
+6B7 is a Combat Helmet. Your favorite vest is not special. You are not
+special. You are a statistic with a hit point named HitChest.
+
+
+---------------------------------------------------------------------
+AAR 010 // NEGLIGENT DISCHARGE LOG
+---------------------------------------------------------------------
+Briefing, 19:02: ND.
+Briefing, 19:03: ND. "My bad."
+Briefing, 19:05: ND into the arsenal crate. Arsenal crate destroyed.
+Briefing, 19:06: Squad lead: "Weapons on safe."
+Briefing, 19:06: ND.
+Briefing, 19:07: The ND guy is now the medic. See AAR 003.
+
+
+---------------------------------------------------------------------
+AAR 011 // THE SNIPER
+---------------------------------------------------------------------
+Total time on overwatch:            3 hours 10 minutes
+Total time spent zeroing:           2 hours 55 minutes
+Shots fired:                        1
+Hits:                               1 (friendly, the medic, see AAR 003)
+Quote: "Wind was crazy."
+Wind setting on the server:         0
+
+
+---------------------------------------------------------------------
+AAR 012 // PILOT DEBRIEF
+---------------------------------------------------------------------
+The helicopter pilot would like it known that:
+  - The LZ was hot because he landed on the enemy.
+  - The ZSh-7A jet helmet now has armor 8 thanks to this patch.
+  - He was flying a helicopter, not a jet, and still wore it.
+  - It did not save him from the tree.
+
+
+---------------------------------------------------------------------
+STANDING ORDERS FOR WHOEVER READS THIS FAR
+---------------------------------------------------------------------
+1. Close the PBO viewer.
+2. Go touch grass. Real grass. Not the Livonia kind.
+3. If you have opinions about the passThrough of a balaclava, write
+   them on a piece of paper, fold it, and eat it.
+4. Report to the range. 7.62 gets through a plate in two shots now.
+   Go confirm it on yourself.
+
+
+=====================================================================
+  END OF ANNEX. THE REMAINDER OF THIS FILE IS THE SQUAD LEAD,
+  STILL ON THE RADIO, UNTIL THE PBO HITS 7.62 MB.
+=====================================================================
+

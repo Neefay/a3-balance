@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "config_passed": true,
+  "acceptance_run": "251.099_2.52472e+08",
+  "pilot_build_id": "db7dc5c0944e341b34b47cdebb6477b06dc7c0f21479d38a35126fe16ef3e7e8",
+  "suite_id": "476385e843428e1702c18c72e78502b463b87f465353e4145d4ff36a7c37af22",
+  "trials": 1185,
+  "missing_classes": [],
+  "matches": 110,
+  "checks": 110,
+  "settings": [
+    [
+      "ace_medical_AIDamageThreshold",
+      "1"
+    ],
+    [
+      "ace_medical_playerDamageThreshold",
+      "1"
+    ],
+    [
+      "ace_medical_fatalDamageSource",
+      "2"
+    ],
+    [
+      "ace_medical_statemachine_AIUnconsciousness",
+      "true"
+    ],
+    [
+      "ace_medical_statemachine_fatalInjuriesAI",
+      "0"
+    ],
+    [
+      "ace_medical_deathChance",
+      "1"
+    ],
+    [
+      "ace_medical_painUnconsciousChance",
+      "0.1"
+    ],
+    [
+      "ace_medical_engine_damagePassThroughEffect",
+      "\"unset\""
+    ]
+  ],
+  "product_version": [
+    "Arma 3",
+    "Arma3",
+    222,
+    154089,
+    "Stable",
+    true,
+    "Windows",
+    "x64",
+    ""
+  ]
+}

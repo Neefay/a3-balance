@@ -1,0 +1,19 @@
+name = "A3 Balance"
+author = "neefay"
+prefix = "a3bal"
+mainprefix = "z"
+
+[version]
+# read from addons/main/script_version.hpp
+git_hash = 0
+
+[files]
+include = [
+    "mod.cpp",
+    "README.md",
+]
+
+[hemtt.release]
+# `hemtt release` signs the PBO with a key it generates and zips the mod
+sign = true
+archive = true

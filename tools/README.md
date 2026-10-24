@@ -46,6 +46,16 @@ that write a capture or build refuse to overwrite an existing one.
 | `build_query_db.py` | `equipment.sqlite` and `chart-data/` CSVs; see `queries.sql` |
 | `make_example_chart.py` | an offline example chart over the database |
 
+## Patch
+
+| Script | What it does |
+|---|---|
+| `config_model.py` | a model of the loaded config from the full-modset capture: where each value is defined, which class each nested class inherits from; it must reproduce every captured value |
+| `plan_patch.py` | where to write each value so every target gets it and nothing else changes; re-simulates the result |
+| `emit_patch.py` | writes a plan as config text that declares only what it needs and keeps every parent |
+| `build_patch.py [out]` | the three above for the whole ledger: one addon per mod, its dependencies and the in-game checks |
+| `predict_rebinds.py <config.cpp> ...` | reads finished configs as the engine does and lists any class whose parent they would change |
+
 ## Check and build
 
 | Script | What it does |
@@ -54,14 +64,17 @@ that write a capture or build refuse to overwrite an existing one.
 | `prepare_clean_capture.py` | writes the session 3 anchor capture script |
 | `compare_clean_baseline.py` | compares the vanilla captures with the modset's values |
 | `prepare_acceptance_test.py` | writes the damage test for the pilot |
-| `build_balance_pilot.py [folder]` | the test mod: every change, the config check and the damage test, in one PBO |
-| `build_release.py <session> --hemtt` | writes `../addons/main/config.cpp` from a passed pilot |
+| `build_balance_pilot.py [folder]` | the test mod: every mod's patch as it will ship, plus `a3bal_tests` with the config check, the damage test and the launcher |
+| `build_release.py <session> --hemtt` | copies the tested patches to `../addons/<mod>/` |
+| `build_release.py --candidate - --hemtt` | the same before a session, marked as not verified |
 | `build_release.py <session> --out <dir>` | packs an unsigned release without HEMTT |
 
 `build_helmet_pilot.py`, `import_helmet_verification.py`,
 `import_balance_verification.py` and `verify_helmet_pilot.template.sqf` are the
 earlier helmet-only and two-part pilots. The current scripts reuse their PBO
-packer and validators.
+packer and validators. The tests for the patch build are in `test_patch.py`,
+which builds a small modset in which an independent mini-engine decides the
+captured values.
 
 ## Tests
 

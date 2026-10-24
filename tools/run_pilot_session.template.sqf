@@ -6,7 +6,7 @@ A3BAL_session_running = true;
     private _refused = false;
     for "_part" from 1 to _parts do {
         A3BAL_verify_done = nil;
-        [] execVM format ["\a3bal_pilot\tests\verify_part%1.sqf", _part];
+        [] execVM format ["\a3bal_tests\tests\verify_part%1.sqf", _part];
         // A stalled part is logged and skipped after 30 minutes; the importer then reports it missing.
         private _start = diag_tickTime;
         waitUntil {sleep 1; !isNil "A3BAL_verify_done" || {diag_tickTime - _start > 1800}};
@@ -15,5 +15,5 @@ A3BAL_session_running = true;
         sleep 3;
     };
     if (_refused) exitWith {A3BAL_session_running = nil;};
-    [] execVM "\a3bal_pilot\tests\acceptance_test.sqf";
+    [] execVM "\a3bal_tests\tests\acceptance_test.sqf";
 };

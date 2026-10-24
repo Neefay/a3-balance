@@ -1,0 +1,197 @@
+{
+  "pilot_build_id": "84a4ac50fcc350eb2e1366ea7bcf96c757f7ee4697fdf0a6fec1f0fc72c34666",
+  "plan": {
+    "groups": 716,
+    "writes": 2113,
+    "created_classes": 1110,
+    "fix_rounds": 1
+  },
+  "addons": {
+    "3cb_baf": {
+      "hash": "3875920c95f1c4a9168eccf8a1c259cc56acbc58c7f3f1654744b522d4b479e2",
+      "required_addons": [
+        "A3_Characters_F",
+        "UK3CB_BAF_Equipment_Helmets",
+        "UK3CB_BAF_Equipment_Vests",
+        "UK3CB_BAF_Vehicles_Weapons",
+        "UK3CB_BAF_Weapons_Ammo",
+        "UK3CB_Factions_Equipment_Vests"
+      ],
+      "writes": 39
+    },
+    "3cb_factions": {
+      "hash": "55f766b28a65088b9c974e0703c4e20322cd1b4951832dfef37f0d243a33badc",
+      "required_addons": [
+        "A3_Characters_F",
+        "UK3CB_Factions_Equipment_CW_Headgear_Soviet",
+        "UK3CB_Factions_Equipment_CW_Headgear_US",
+        "UK3CB_Factions_Equipment_Vests",
+        "UK3CB_Factions_Headgear",
+        "UK3CB_Factions_Vehicles_Common",
+        "UK3CB_Factions_Weapons2_M1"
+      ],
+      "writes": 48
+    },
+    "3cb_factions_2": {
+      "hash": "de4a84a31856473ab1e95aaeddf9fe77b954552f847963346ca949bc495b595b",
+      "required_addons": [
+        "UK3CB_Factions_AAF_O",
+        "UK3CB_Factions_Equipment_Vests"
+      ],
+      "writes": 6
+    },
+    "ace_ballistics": {
+      "hash": "87b93471ddfde9676ce5c7ab8c8cddd34716a5158e4b8d03d723a15b683b73df",
+      "required_addons": [
+        "ace_ballistics"
+      ],
+      "writes": 16
+    },
+    "broma": {
+      "hash": "6eb389f7c233b94ad9545cb68b061b9af55472849f4573beb977f6a059f00590",
+      "required_addons": [
+        "A3_Characters_F",
+        "BRM_DCU",
+        "BRM_M81",
+        "BRM_MODELS",
+        "BRM_SLDCLRS"
+      ],
+      "writes": 201
+    },
+    "broma_2": {
+      "hash": "7901f360979ae88971a397a0b24acdb872632c1267472c8ab097de6af1707523",
+      "required_addons": [
+        "A3_Characters_F",
+        "BRM_DCU",
+        "BRM_M81",
+        "BRM_MODELS"
+      ],
+      "writes": 190
+    },
+    "broma_3": {
+      "hash": "984e15058051a0850401ce278ab330ec0cfb1fae58ada0b6f44004062fbcba64",
+      "required_addons": [
+        "A3_Characters_F",
+        "BRM_DCU",
+        "BRM_M81",
+        "BRM_MODELS"
+      ],
+      "writes": 50
+    },
+    "ffp_weapons": {
+      "hash": "32b6f96091cbfb7e49ce83753b7c3c61e7098527ed87b14f373e38c5905babff",
+      "required_addons": [
+        "ffp_weapons"
+      ],
+      "writes": 2
+    },
+    "rhs_afrf": {
+      "hash": "e26d01fe667199dc46c2a2b37b575e1230cad5f619bd1c026eeb400b53cd0253",
+      "required_addons": [
+        "A3_Characters_F",
+        "rhs_main_loadorder"
+      ],
+      "writes": 118
+    },
+    "rhs_gref": {
+      "hash": "bb8443978696f7e91ed1fdd74591c085cafbeca6ae109f4c1c58b273c7bbaa38",
+      "required_addons": [
+        "A3_Characters_F",
+        "rhsgref_main_loadorder"
+      ],
+      "writes": 9
+    },
+    "rhs_saf": {
+      "hash": "4645d7e1fdc4b0dc61d98a540b5009f9f96b9b668ef811cec4051b12eebf6008",
+      "required_addons": [
+        "A3_Characters_F",
+        "rhssaf_main_loadorder"
+      ],
+      "writes": 13
+    },
+    "rhs_usaf": {
+      "hash": "d72aad91045bacda9f3bcf76459340c032513a55b63adab2888847df441ada18",
+      "required_addons": [
+        "A3_Characters_F",
+        "rhsusf_main_loadorder"
+      ],
+      "writes": 184
+    },
+    "rhs_usaf_2": {
+      "hash": "4ec3c6e35e453ad4294949b0171e5d080fc58bf9bf27b77ac2c0769a2509322d",
+      "required_addons": [
+        "A3_Characters_F",
+        "rhsusf_main_loadorder"
+      ],
+      "writes": 3
+    },
+    "ron": {
+      "hash": "6d539995fc498bbf5b77880d9e6eef37e4913c6c9621efbd239b953fe6ec9b68",
+      "required_addons": [
+        "RON_Uniform"
+      ],
+      "writes": 164
+    },
+    "sns": {
+      "hash": "5fdeaa11bd2ff8b1709a9e62632afa57ad6f81baf258fac2a3bbac54a0a840e0",
+      "required_addons": [
+        "A3_Characters_F",
+        "simc_mc_67_core",
+        "simc_mc_81_core",
+        "simc_mc_93_core",
+        "simc_nv_67_core",
+        "simc_svn_67_core",
+        "simc_uaf_67_core",
+        "simc_uaf_68_core",
+        "simc_uaf_81_core",
+        "simc_uaf_88_core"
+      ],
+      "writes": 968
+    },
+    "sns_2": {
+      "hash": "fe4de5d20363bf143123bcaee980be9b5e0c2d021718074cf7dd8f791c87e4ef",
+      "required_addons": [
+        "simc_mc_93_core",
+        "simc_uaf_67_core",
+        "simc_uaf_81_core"
+      ],
+      "writes": 92
+    },
+    "sns_headgear": {
+      "hash": "afa15e0ea20857b70f6825e7fd35ab3664d53a67be4b988e7f10a985d37f0a07",
+      "required_addons": [
+        "A3_Characters_F",
+        "sns_french_headgear",
+        "sns_headgears"
+      ],
+      "writes": 10
+    }
+  },
+  "inferred_parent_bindings": [
+    [
+      [
+        "CfgVehicles",
+        "simc_nva_67_base",
+        [
+          "hitpoints"
+        ]
+      ],
+      [
+        "CfgVehicles",
+        "camanbase",
+        [
+          "hitpoints"
+        ]
+      ]
+    ]
+  ],
+  "other_mods_also_editing_written_classes": {
+    "ace_compat_rhs_afrf3": 5,
+    "ace_compat_rhs_afrf3_hearing": 2,
+    "ace_compat_rhs_saf3": 1,
+    "ace_compat_rhs_usf3": 8,
+    "ace_compat_rhs_usf3_hearing": 2
+  },
+  "checked_classes": 3592,
+  "verified_fields_expected": 87681
+}

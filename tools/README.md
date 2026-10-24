@@ -6,7 +6,7 @@ one does, for running steps by hand or changing them. Run everything from this
 folder with Python 3.11 or newer. There are no dependencies.
 
 Generated folders (`data-recovered/`, `proposal/`, `validation/`, `audit/`,
-`chart-data/`, `balance-pilot/`, `equipment.sqlite`) are git-ignored. Scripts
+`chart-data/`, `patch/`, `balance-pilot/`, `equipment.sqlite`) are git-ignored. Scripts
 that write a capture or build refuse to overwrite an existing one.
 
 ## In-game scripts

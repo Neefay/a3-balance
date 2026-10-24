@@ -85,3 +85,9 @@ explains what each session does, and shows where to change the tiers.
 | `reference/` | the change ledger: every changed value with its old value |
 | `release.json` | provenance of the current config: pilot build ID and hashes |
 | `extras/` | not part of the build |
+
+## License
+
+[MIT](LICENSE). The patch only references other mods' classes and copies their
+own config values next to the changed ones; it contains none of their models,
+textures or scripts, and those mods remain their authors' work.
